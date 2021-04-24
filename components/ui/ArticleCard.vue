@@ -1,20 +1,20 @@
 <template>
-  <div class="container mx-auto px-4">
+  <div class="px-4 mx-auto transition duration-500 transform hover:scale-110">
     <nuxt-link
-      class="block text-gray-800 rounded-lg shadow-lg p-6"
+      class="block p-6 text-gray-800 rounded-lg shadow-lg hover:shadow-xl"
       :to="`/${slug}`"
     >
       <header class="text-2xl font-bold">{{ title }}</header>
       <p class="mt-4">{{ description }}</p>
       <footer class="flex items-center mt-6">
         <img
-          class="w-20 rounded-full border-4 border-main"
+          class="w-20 border-4 rounded-full border-main hover:border-1 hover:border-purple-400"
           :src="author.content.Avatar.filename"
           :alt="author.name"
         />
         <div class="ml-6">
           <span class="text-xl font-bold">{{ author.name }}</span>
-          <span class="text-sm mt-1">{{ date }}</span>
+          <span class="mt-1 text-sm">{{ date }}</span>
         </div>
       </footer>
     </nuxt-link>
