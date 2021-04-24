@@ -1,4 +1,4 @@
-# mini-vue-dose
+# learn-step-by-step
 
 ## Build Setup
 
