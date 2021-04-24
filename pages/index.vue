@@ -1,7 +1,7 @@
 <template>
-  <div class="container mx-auto px-4">
+  <div class="container px-4 mx-auto">
     <h1 class="mt-4 ml-4 text-4xl font-bold">Articles</h1>
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-4">
+    <div class="grid grid-cols-1 gap-8 mt-4 sm:grid-cols-2 lg:grid-cols-3">
       <ui-article-card
         v-for="article in articles"
         :key="article.content.name"
