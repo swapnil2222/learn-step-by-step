@@ -1,7 +1,8 @@
 <template>
   <div class="container px-4 mx-auto">
     <h1 class="mt-4 ml-4 text-4xl font-bold">
-      Found {{ topic.taggings_count }} on {{ topic.name }} articles
+      Found {{ topic.taggings_count }} article
+      {{ topic.taggings_count > 1 ? '(s)' : '' }} on {{ topic.name }}
     </h1>
     <div class="grid grid-cols-1 gap-8 mt-4 sm:grid-cols-2 lg:grid-cols-3">
       <ui-article-card
@@ -22,7 +23,6 @@ import kebabCase from 'lodash.kebabcase'
 export default {
   async asyncData({ app, params }) {
     const { data: tagsData } = await app.$storyapi.get('cdn/tags')
-    console.log('tagsData', tagsData)
     const topic = tagsData.tags.find(
       (tag) => kebabCase(tag.name) === params.slug
     )

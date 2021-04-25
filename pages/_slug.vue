@@ -4,7 +4,7 @@
       <h2 class="text-4xl">{{ article.content.title }}</h2>
       <div class="flex items-center mt-6">
         <img
-          class="w-20 border-4 rounded-full border-main"
+          class="w-20 border-4 rounded-full border-main hover:border-purple-400"
           :src="author.content.Avatar.filename"
           :alt="author.content.name"
         />
