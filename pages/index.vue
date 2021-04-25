@@ -17,7 +17,7 @@
 
 <script>
 export default {
-  async asyncData({ app, route, error }) {
+  async asyncData({ app }) {
     const res = await app.$storyapi.get('cdn/stories', {
       starts_with: 'articles/',
       resolve_relations: 'author',
